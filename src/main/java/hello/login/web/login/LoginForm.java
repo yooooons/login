@@ -1,17 +1,15 @@
-package hello.login.domain.member;
+package hello.login.web.login;
+
 
 import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 
 @Data
-public class Member {
-    private Long id;//데이터 저장 아이디
-
+public class LoginForm {
     @NotEmpty
     private String loginId;//로그인 아이디
-    @NotEmpty
-    private String name; //사용자 이름
+
     @NotEmpty
     private String password;
 }
