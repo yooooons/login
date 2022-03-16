@@ -18,17 +18,6 @@ public class ItemServiceApplication {
 		SpringApplication.run(ItemServiceApplication.class, args);
 
 	}
-	@Bean
-	public ServletContextInitializer clearJsession() {
-		return new ServletContextInitializer() {
-			@Override
-			public void onStartup(ServletContext servletContext) throws ServletException {
-				servletContext.setSessionTrackingModes(Collections.singleton(SessionTrackingMode.COOKIE));
-				SessionCookieConfig sessionCookieConfig=servletContext.getSessionCookieConfig();
-				sessionCookieConfig.setName("asd");
 
-			}
-		};
-	}
 
 }
